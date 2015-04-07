@@ -22,7 +22,7 @@ final class SupportAnimatorLollipop extends SupportAnimator{
     }
 
     @Override
-    public Object get() {
+    public Animator get() {
         return mNativeAnimator.get();
     }
 

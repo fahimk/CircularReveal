@@ -20,7 +20,7 @@ final class SupportAnimatorPreL extends SupportAnimator {
     }
 
     @Override
-    public Object get() {
+    public Animator get() {
         return mSupportFramework.get();
     }
 

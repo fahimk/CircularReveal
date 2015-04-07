@@ -1,5 +1,6 @@
 package io.codetail.circualrevealsample;
 
+import android.animation.ObjectAnimator;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.CardView;
@@ -16,9 +17,6 @@ import android.view.animation.AccelerateInterpolator;
 import android.view.animation.DecelerateInterpolator;
 import android.view.animation.Interpolator;
 import android.widget.Toast;
-
-import com.nineoldandroids.animation.ObjectAnimator;
-import com.nineoldandroids.view.ViewHelper;
 
 import java.lang.ref.WeakReference;
 
@@ -269,14 +267,14 @@ public class MainActivity extends ActionBarActivity{
 
         public void hide(final View target, float distance){
             ObjectAnimator animator = ObjectAnimator.ofFloat(target, "translationY",
-                    ViewHelper.getTranslationY(target), distance);
+                    target.getTranslationY(), distance);
             animator.setInterpolator(DECELERATE);
             animator.start();
         }
 
         public void show(final View target){
             ObjectAnimator animator = ObjectAnimator.ofFloat(target, "translationY",
-                    ViewHelper.getTranslationY(target), 0f);
+                    target.getTranslationY(), 0f);
             animator.setInterpolator(ACCELERATE);
             animator.start();
         }

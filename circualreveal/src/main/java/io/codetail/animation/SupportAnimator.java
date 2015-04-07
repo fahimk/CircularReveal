@@ -1,5 +1,6 @@
 package io.codetail.animation;
 
+import android.animation.Animator;
 import android.view.animation.Interpolator;
 
 public abstract class SupportAnimator {
@@ -15,7 +16,7 @@ public abstract class SupportAnimator {
      * {@link android.os.Build.VERSION_CODES#LOLLIPOP} and greater will return
      * {@link android.animation.Animator} otherwise {@link com.nineoldandroids.animation.Animator}
      */
-    public abstract Object get();
+    public abstract Animator get();
 
     /**
      * Starts this animation. If the animation has a nonzero startDelay, the animation will start
