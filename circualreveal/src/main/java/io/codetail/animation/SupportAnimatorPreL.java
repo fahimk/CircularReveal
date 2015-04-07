@@ -2,7 +2,7 @@ package io.codetail.animation;
 
 import android.view.animation.Interpolator;
 
-import com.nineoldandroids.animation.Animator;
+import android.animation.Animator;
 
 import java.lang.ref.WeakReference;
 
